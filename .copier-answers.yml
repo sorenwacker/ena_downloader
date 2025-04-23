@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier
+_commit: v0.2.17
+_src_path: git+https://gitlab.ewi.tudelft.nl/reit/python-package-template
+email: s.wacker@tudelft.nl
+environment_manager: uv
+full_name: Sören Wacker
+host: github.com
+license: MIT
+min_python_version: '3.11'
+org: sorenwacker
+project_name: ena_downloader
+project_short_description: A great package.
+python_name: ena_downloader
+url: https://github.com/sorenwacker/ena_downloader
