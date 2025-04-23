@@ -7,6 +7,7 @@ import tempfile
 from unittest.mock import MagicMock, patch
 
 import pytest
+import requests
 
 from ena_downloader.downloader import ENADownloader
 
@@ -26,9 +27,7 @@ def downloader(temp_dir):
 
 def test_initialization(temp_dir):
     """Test initialization of the downloader."""
-    downloader = ENADownloader(output_dir=temp_dir)
-
-    print("Downloader initialized with output directory:", downloader.output_dir)
+    _ = ENADownloader(output_dir=temp_dir)
 
     # Check if directory structure was created
     assert os.path.exists(os.path.join(temp_dir, "raw", "sequencing"))
@@ -78,7 +77,7 @@ def test_search_dataset_error(mock_get, downloader):
     """Test error handling when searching for dataset."""
     # Mock the response with an error
     mock_response = MagicMock()
-    mock_response.raise_for_status.side_effect = Exception("API Error")
+    mock_response.raise_for_status.side_effect = requests.RequestException("API Error")
     mock_get.return_value = mock_response
 
     # Test the function

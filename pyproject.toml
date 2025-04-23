@@ -46,7 +46,7 @@ version-file = "_version.py"
 Homepage = "https://github.com/sorenwacker/ena_downloader"
 
 [project.scripts]
-main_script = "ena_downloader.main:main"
+ena-downloader = "ena_downloader.cli:main"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
