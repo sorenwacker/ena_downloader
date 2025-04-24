@@ -118,7 +118,7 @@ pydocstyle.convention = "google"
 ]
 
 [tool.yamlfix]
-line_length = 88
+line_length = 200
 sequence_style = "keep_style"
 explicit_start = false
 whitelines = 1
